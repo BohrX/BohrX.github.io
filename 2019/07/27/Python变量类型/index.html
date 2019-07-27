@@ -393,6 +393,8 @@
 <p>del语句的语法是：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">del</span> var1[,var2[,var3[....,varN]]]]</span><br></pre></td></tr></table></figure>
 
+<a id="more"></a>
+
 <h3 id="标准数据类型"><a href="#标准数据类型" class="headerlink" title="标准数据类型"></a>标准数据类型</h3><p>Python(2.X)有五个标准的数据类型：</p>
 <h4 id="Numbers（数字）"><a href="#Numbers（数字）" class="headerlink" title="Numbers（数字）"></a>Numbers（数字）</h4><p>数字数据类型用于存储数值。当你指定一个值时，Number对象就会被创建。</p>
 <p>他们是不可改变的数据类型，这意味着改变数字数据类型会分配一个新的对象。</p>
@@ -449,7 +451,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-07-27T23:40:20+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-07-27T23:59:36+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
     <p>最后更新于 2019年7月27日</p>
@@ -474,7 +476,22 @@
       
         <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://bohrx.github.io/2019/07/27/Python变量类型/&title=Python变量类型 | BohrX's External Memory&pics=https://cdn.jsdelivr.net/gh/BohrX/BohrX.github.io@master/asset/avatar/mine.png&summary="
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://bohrx.github.io/2019/07/27/Python变量类型/&title=Python变量类型 | BohrX's External Memory&pics=https://cdn.jsdelivr.net/gh/BohrX/BohrX.github.io@master/asset/avatar/mine.png&summary=Python变量类型[TOC]
+变量赋值方式(对象创建，删除引用)Python 中的变量赋值不需要类型声明。每个变量在使用前都必须赋值，变量赋值以后该变量对象才会被创建。等号（=）用来给变量赋值。
+等号（=）运算符左边是一个变量名,等号（=）运算符右边是存储在变量中的值。
+1counter = 100 # 赋值整型变量
+
+Python允许你同时为多个变量赋值。例如：
+1a = b = c = 1
+
+以上实例，创建一个整型对象，值为1，三个变量被分配到相同的内存空间上。
+您也可以为多个对象指定多个变量。例如：
+1a, b, c = 1, 2, "john"
+
+以上实例，两个整型对象1和2的分配给变量 a 和 b，字符串对象 “john” 分配给变量 c。
+可以使用del语句删除一些对象的引用。
+del语句的语法是：
+1del var1[,var2[,var3[....,varN]]]]"
           
           >
           
@@ -486,7 +503,22 @@
       
         <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bohrx.github.io/2019/07/27/Python变量类型/&title=Python变量类型 | BohrX's External Memory&pics=https://cdn.jsdelivr.net/gh/BohrX/BohrX.github.io@master/asset/avatar/mine.png&summary="
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bohrx.github.io/2019/07/27/Python变量类型/&title=Python变量类型 | BohrX's External Memory&pics=https://cdn.jsdelivr.net/gh/BohrX/BohrX.github.io@master/asset/avatar/mine.png&summary=Python变量类型[TOC]
+变量赋值方式(对象创建，删除引用)Python 中的变量赋值不需要类型声明。每个变量在使用前都必须赋值，变量赋值以后该变量对象才会被创建。等号（=）用来给变量赋值。
+等号（=）运算符左边是一个变量名,等号（=）运算符右边是存储在变量中的值。
+1counter = 100 # 赋值整型变量
+
+Python允许你同时为多个变量赋值。例如：
+1a = b = c = 1
+
+以上实例，创建一个整型对象，值为1，三个变量被分配到相同的内存空间上。
+您也可以为多个对象指定多个变量。例如：
+1a, b, c = 1, 2, "john"
+
+以上实例，两个整型对象1和2的分配给变量 a 和 b，字符串对象 “john” 分配给变量 c。
+可以使用del语句删除一些对象的引用。
+del语句的语法是：
+1del var1[,var2[,var3[....,varN]]]]"
           
           >
           
@@ -498,7 +530,22 @@
       
         <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://bohrx.github.io/2019/07/27/Python变量类型/&title=Python变量类型 | BohrX's External Memory&pics=https://cdn.jsdelivr.net/gh/BohrX/BohrX.github.io@master/asset/avatar/mine.png&summary="
+          href="http://service.weibo.com/share/share.php?url=https://bohrx.github.io/2019/07/27/Python变量类型/&title=Python变量类型 | BohrX's External Memory&pics=https://cdn.jsdelivr.net/gh/BohrX/BohrX.github.io@master/asset/avatar/mine.png&summary=Python变量类型[TOC]
+变量赋值方式(对象创建，删除引用)Python 中的变量赋值不需要类型声明。每个变量在使用前都必须赋值，变量赋值以后该变量对象才会被创建。等号（=）用来给变量赋值。
+等号（=）运算符左边是一个变量名,等号（=）运算符右边是存储在变量中的值。
+1counter = 100 # 赋值整型变量
+
+Python允许你同时为多个变量赋值。例如：
+1a = b = c = 1
+
+以上实例，创建一个整型对象，值为1，三个变量被分配到相同的内存空间上。
+您也可以为多个对象指定多个变量。例如：
+1a, b, c = 1, 2, "john"
+
+以上实例，两个整型对象1和2的分配给变量 a 和 b，字符串对象 “john” 分配给变量 c。
+可以使用del语句删除一些对象的引用。
+del语句的语法是：
+1del var1[,var2[,var3[....,varN]]]]"
           
           >
           
