@@ -291,9 +291,324 @@
         
           
         
+          
+        
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/2019/07/27/Python基本程序结构/">
+      Python基本程序结构
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://bohrx.github.io" rel="nofollow">
+      
+        <img src="https://cdn.jsdelivr.net/gh/BohrX/BohrX.github.io@master/asset/avatar/mine.png">
+      
+      <p>BohrX</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-07-27</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/python/基础/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>python&nbsp;/&nbsp;基础</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h2 id="Python基本程序结构"><a href="#Python基本程序结构" class="headerlink" title="Python基本程序结构"></a>Python基本程序结构</h2><p>[TOC]</p>
+<h3 id="Python-条件语句"><a href="#Python-条件语句" class="headerlink" title="Python 条件语句"></a>Python 条件语句</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 判断条件<span class="number">1</span>:</span><br><span class="line">    执行语句<span class="number">1</span>……</span><br><span class="line"><span class="keyword">elif</span> 判断条件<span class="number">2</span>:</span><br><span class="line">    执行语句<span class="number">2</span>……</span><br><span class="line"><span class="keyword">elif</span> 判断条件<span class="number">3</span>:</span><br><span class="line">    执行语句<span class="number">3</span>……</span><br><span class="line"><span class="keyword">else</span>：</span><br><span class="line">    执行语句<span class="number">4</span>……</span><br></pre></td></tr></table></figure>
+
+<p>elif 可以省略，所有<strong>可以是任何表达式，任何非零、或非空（null）的值均为true</strong>。</p>
+<p>由于 python 并<strong>不支持</strong> switch 语句，所以多个条件判断，只能用 elif 来实现</p>
+<p>当执行语句只有一行时可以：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 判断条件<span class="number">1</span>:执行语句<span class="number">1</span>;</span><br><span class="line"><span class="keyword">elif</span> 判断条件<span class="number">2</span>:执行语句<span class="number">2</span>;</span><br><span class="line"><span class="keyword">else</span>：执行语句<span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+
+<p>python 复合布尔表达式计算采用短路规则，即如果通过前面的部分已经计算出整个表达式的值，则后面的部分不再计算。如下面的代码将正常执行不会报除零错误：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a=0</span><br><span class="line">b=1</span><br><span class="line">if ( a &gt; 0 ) and ( b / a &gt; 2 ):</span><br><span class="line">    print &quot;yes&quot;</span><br><span class="line">else :</span><br><span class="line">    print &quot;no&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Python-循环语句"><a href="#Python-循环语句" class="headerlink" title="Python 循环语句"></a>Python 循环语句</h3><p>Python提供了for循环和while循环（在Python中没有do..while循环）:</p>
+<h4 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">while 判断条件：</span><br><span class="line">    执行语句……</span><br></pre></td></tr></table></figure>
+
+<p>执行语句可以是单个语句或语句块。判断条件<strong>可以是任何表达式，任何非零、或非空（null）的值均为true</strong>。</p>
+<p>当判断条件假false时，循环结束。</p>
+<p>类似 if 语句的语法，如果你的 while 循环体中只有一条语句，你可以将该语句与while写在同一行中</p>
+<h4 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h4><p><strong>语法：</strong></p>
+<p>for循环的语法格式如下：——类似于java for each语法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> iterating_var <span class="keyword">in</span> sequence:</span><br><span class="line">   statements(s)</span><br></pre></td></tr></table></figure>
+
+<p>从序列中取元素出来处理，String 可以被当做单个字符的sequence使用</p>
+<p><strong>使用下标循环：</strong></p>
+<p>想要使用”下标索引”可以使用range(数字)来获取一个范围(range)。range也是一种类型（type），它是一个数字的序列（s sequence of numbers），而且是不可变的，通常用在for循环中</p>
+<p>class range(stop)</p>
+<p>class range(start, stop [, step])</p>
+<p>对于第一种构造方式，start默认值为0，step默认值为1<br>【*<em>python Sequence 的基本类型包括：list tuple与range</em>】</p>
+<p>使用len()获取序列长度够造范围：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fruits = [<span class="string">'banana'</span>, <span class="string">'apple'</span>, <span class="string">'mango'</span>]</span><br><span class="line"><span class="keyword">for</span> index <span class="keyword">in</span> range(len(fruits)):</span><br><span class="line">   <span class="keyword">print</span> <span class="string">'当前水果 :'</span>, fruits[index]</span><br><span class="line"> </span><br><span class="line"><span class="keyword">print</span> <span class="string">"Good bye!"</span></span><br></pre></td></tr></table></figure>
+
+<p>或者用内置 enumerate 函数进行遍历:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> index, item <span class="keyword">in</span> enumerate(sequence):</span><br><span class="line">    process(index, item)</span><br></pre></td></tr></table></figure>
+
+<p>enumerate 返回的是包含每个元素的定值表（index,item)，枚举对象</p>
+<h4 id="for…else-while…else"><a href="#for…else-while…else" class="headerlink" title="for…else/while…else"></a>for…else/while…else</h4><p>在 python 中，for … else 表示这样的意思，for 中的语句和普通的没有区别，else 中的语句会在循环正常执行完（即 for 不是通过 break 跳出而中断的）的情况下执行，while … else 也是一样。</p>
+<h4 id="循环嵌套"><a href="#循环嵌套" class="headerlink" title="循环嵌套"></a>循环嵌套</h4><p>Python 语言允许在一个循环体里面嵌入另一个循环。你可以在循环体内嵌入其他的循环体，如在while循环中可以嵌入for循环， 反之，你可以在for循环中嵌入while循环。<strong>注意缩进！</strong></p>
+<h3 id="流程控制语句"><a href="#流程控制语句" class="headerlink" title="流程控制语句"></a>流程控制语句</h3><h4 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h4><p>continue 语句用来告诉Python跳过当前循环的剩余语句，然后继续进行下一轮循环。continue语句用在while和for循环中。</p>
+<p>continue 语句跳出本次循环，break跳出整个循环。</p>
+<h4 id="break"><a href="#break" class="headerlink" title="break"></a>break</h4><p>Python break语句，打破了最小封闭for或while循环。break语句用来终止循环语句，即循环条件没有False条件或者序列还没被完全递归完，也会停止执行循环语句。</p>
+<p>如果您使用嵌套循环，break语句将停止执行最深层的循环，并开始执行下一行代码。</p>
+<h4 id="pass"><a href="#pass" class="headerlink" title="pass"></a>pass</h4><p>Python pass是空语句，是为了保持程序结构的完整性。pass 不做任何事情，一般用做占位语句。相当于java中的”;”语句</p>
+<p>主要用于条件判断语句(if)中(实际上可以出现在任何地方)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> true:</span><br><span class="line">    <span class="keyword">pass</span> <span class="comment"># do nothing</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"do something."</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/python/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>python</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/2019/07/27/Python运算符/">
+      Python运算符
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://bohrx.github.io" rel="nofollow">
+      
+        <img src="https://cdn.jsdelivr.net/gh/BohrX/BohrX.github.io@master/asset/avatar/mine.png">
+      
+      <p>BohrX</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-07-27</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/python/基础/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>python&nbsp;/&nbsp;基础</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h2 id="Python运算符"><a href="#Python运算符" class="headerlink" title="Python运算符"></a>Python运算符</h2><p>[TOC]</p>
+<h3 id="编程语言大多都有的运算符"><a href="#编程语言大多都有的运算符" class="headerlink" title="编程语言大多都有的运算符"></a>编程语言大多都有的运算符</h3><h4 id="Python算术运算符"><a href="#Python算术运算符" class="headerlink" title="Python算术运算符"></a>Python算术运算符</h4><p>出去加(+)减(-)乘(*)除(/) 取模(%)外 还有 </p>
+<ul>
+<li>乘方(**) a**b为a的b次幂 9**2输出结果81</li>
+<li>取整除(//) 返回商的整数部分 9//2 输出结果 4 , 9.0//2.0 输出结果 4.0</li>
+</ul>
+<h4 id="Python比较运算符"><a href="#Python比较运算符" class="headerlink" title="Python比较运算符"></a>Python比较运算符</h4><p>与java相同 等于== 不等于!= &lt;&gt; 大于&gt; 小于&lt; 大于等于&gt;= 小于等于&lt;=</p>
+<h4 id="Python赋值运算符"><a href="#Python赋值运算符" class="headerlink" title="Python赋值运算符"></a>Python赋值运算符</h4><p>有= 及算数运算符拼=两种</p>
+<p>=号就是赋值，+= -= <em>= /= %= *</em>= //= 均为前面的数与后面的数进行算术运算后在赋值给前数</p>
+<h4 id="Python位运算符"><a href="#Python位运算符" class="headerlink" title="Python位运算符"></a>Python位运算符</h4><p>按位运算符是把数字看作二进制一位一位来进行计算的。</p>
+<table>
+<thead>
+<tr>
+<th>按位与</th>
+<th>按位或</th>
+<th>按位异或</th>
+<th>按位非</th>
+<th>左移</th>
+<th>右移</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&amp;</td>
+<td>|</td>
+<td>^</td>
+<td>~</td>
+<td>&lt;&lt;</td>
+<td>&gt;&gt;</td>
+</tr>
+</tbody></table>
+<h4 id="Python逻辑运算符"><a href="#Python逻辑运算符" class="headerlink" title="Python逻辑运算符"></a>Python逻辑运算符</h4><p>and or not</p>
+<h3 id="Python特有的运算符"><a href="#Python特有的运算符" class="headerlink" title="Python特有的运算符"></a>Python特有的运算符</h3><h4 id="Python成员运算符"><a href="#Python成员运算符" class="headerlink" title="Python成员运算符"></a>Python成员运算符</h4><p>用来测试字符串，列表或元组中包含了一系列的成员</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>in</td>
+<td>如果在指定的序列中找到值返回 True，否则返回 False。</td>
+<td>x 在 y 序列中 , 如果 x 在 y 序列中返回 True。</td>
+</tr>
+<tr>
+<td>not in</td>
+<td>如果在指定的序列中没有找到值返回 True，否则返回 False。</td>
+<td>x 不在 y 序列中 , 如果 x 不在 y 序列中返回 True。</td>
+</tr>
+</tbody></table>
+<h4 id="Python身份运算符"><a href="#Python身份运算符" class="headerlink" title="Python身份运算符"></a>Python身份运算符</h4><p>身份运算符用于比较两个对象的存储单元(对象)</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>is</td>
+<td>is 是判断两个标识符是不是引用自一个对象</td>
+<td><strong>x is y</strong>, 类似 <strong>id(x) == id(y)</strong> , 如果引用的是同一个对象则返回 True，否则返回 False</td>
+</tr>
+<tr>
+<td>is not</td>
+<td>is not 是判断两个标识符是不是引用自不同对象</td>
+<td><strong>x is not y</strong> ， 类似 <strong>id(a) != id(b)</strong>。如果引用的不是同一个对象则返回结果 True，否则返回 False。</td>
+</tr>
+</tbody></table>
+<p><strong>注：</strong> <a href="http://www.runoob.com/python/python-func-id.html" target="_blank" rel="noopener">id()</a> 函数用于获取对象内存地址。</p>
+<h2 id="Python运算符优先级"><a href="#Python运算符优先级" class="headerlink" title="Python运算符优先级"></a>Python运算符优先级</h2><p>指数 &gt;一元运算符（~+-）&gt;乘除取模取整除&gt;加减&gt;位移&gt;按位与&amp;&gt; ^ |&gt;比较（除等于）&gt;等于不等于&gt;赋值&gt;身份运算符 &gt;逻辑运算符</p>
+<h2 id="Python-中没有-或-–-自运算符"><a href="#Python-中没有-或-–-自运算符" class="headerlink" title="Python 中没有 ++ 或 – 自运算符"></a>Python 中没有 ++ 或 – 自运算符</h2>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/python/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>python</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -845,9 +1160,9 @@
     <div class='content material'>
       <ul class="entry">
         
-          <li><a class="flat-box" title="/categories/python/" href="/categories/python/"><div class='name'>python</div><div class='badge'>(2)</div></a></li>
+          <li><a class="flat-box" title="/categories/python/" href="/categories/python/"><div class='name'>python</div><div class='badge'>(4)</div></a></li>
         
-          <li><a class="flat-box child" title="/categories/python/基础/" href="/categories/python/基础/"><div class='name'>基础</div><div class='badge'>(2)</div></a></li>
+          <li><a class="flat-box child" title="/categories/python/基础/" href="/categories/python/基础/"><div class='name'>基础</div><div class='badge'>(4)</div></a></li>
         
       </ul>
     </div>
